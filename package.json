@@ -1,0 +1,29 @@
+{
+    "name": "dialogLoader",
+    "version": "1.0.0",
+    "description": "Asynchronously load and register HTML dialog elements for cross-browser support.",
+    "keywords": [
+        "DEGJS"
+    ],
+    "author": {
+        "name": "Anna Scheuler",
+        "email": "ascheuler@degdigital.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DEGJS/dialogLoader.git"
+    },
+    "bugs": "https://github.com/DEGJS/dialogLoader/issues",
+    "jspm": {
+        "registry": "jspm",
+        "format": "es6",
+        "main": "dialogLoader.js",
+        "directories": {
+            "lib": "src"
+        },
+        "dependencies": {
+            "dialog-polyfill": "npm:dialog-polyfill@^0.4.9"
+        }
+    }
+}
