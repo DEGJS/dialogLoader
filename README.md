@@ -18,6 +18,15 @@ JSPM automatically installs and configures this module's dependencies for you. H
 * [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
 * dialogLoader requires [SystemJS](https://github.com/systemjs/systemjs) and will only work with v0.19.x or earlier, as it uses its `System.import()` method to load modules.
 
+## Options
+#### options.enableObservation
+Type: `boolean`
+Setting this option to `false` prevents dialogLoader from observing the page for added dialog elements. Defaults to `true`.
+
+#### options.observedEl
+Type: `Element`
+The element to be observed for changes. Defaults to `document.body`.
+
 ## Browser Support
 moduleLoader depends on the following browser APIs:
 
