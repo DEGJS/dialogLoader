@@ -1,6 +1,11 @@
 import dialogPolyfill from 'dialog-polyfill';
 
-const dialogLoader = function() {
+const dialogLoader = function(options = {}) {
+
+    const defaults = {
+        enableObservation: true,
+        observedEl: document.body
+    };
     
     const mutationConfig = {
         childList: true,
@@ -12,14 +17,18 @@ const dialogLoader = function() {
         attributeFilter: false
     };
 
+    const settings = {...defaults, ...options};
+
     function init() {
         initDialogsOnPage();
-        const observer = new MutationObserver(onMutation);
-        observer.observe(document.body, mutationConfig);
+        if(settings.enableObservation === true){
+            const observer = new MutationObserver(onMutation);
+            observer.observe(settings.observedEl, mutationConfig);
+        }
     }
 
     function initDialogsOnPage(){
-        const dialogEls = Array.from(document.querySelectorAll('dialog'));
+        const dialogEls = [...document.querySelectorAll('dialog')];
         registerDialogs(dialogEls);
     }
 
@@ -36,9 +45,7 @@ const dialogLoader = function() {
     }
 
     function registerDialogs(dialogEls){
-        dialogEls.forEach( (dialogItem) => {
-            dialogPolyfill.registerDialog(dialogItem);
-        })
+        dialogEls.forEach(dialogItem => dialogPolyfill.registerDialog(dialogItem));
     }
 
     init();
