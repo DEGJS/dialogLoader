@@ -17,20 +17,32 @@ JSPM automatically installs and configures this module's dependencies for you. H
 
 * [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
 * dialogLoader requires [SystemJS](https://github.com/systemjs/systemjs) and will only work with v0.19.x or earlier, as it uses its `System.import()` method to load modules.
+* [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
 
 ## Options
 #### options.enableObservation
 Type: `boolean`
-Setting this option to `false` prevents dialogLoader from observing the page for added dialog elements. Defaults to `true`.
+Setting this option to `false` prevents dialogLoader from observing the page for added dialog elements. 
+Defaults to `true`.
 
 #### options.observedEl
 Type: `Element`
-The element to be observed for changes. Defaults to `document.body`.
+The element to be observed for changes. 
+Defaults to `document.body`.
+
+## CSS Notes
+Include the following CSS in a project to prevent unwated IE issues:
+```
+.dialog {
+  &:not([open]) {
+    display: none;
+  }
+}
+```
 
 ## Browser Support
 moduleLoader depends on the following browser APIs:
 
 + forEach: [Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | [Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill) -- only necessary if IE9 is a supported browser on your project
-+ Array.from: [Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) | [Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#Polyfill)
 
 To support legacy browsers, you'll need to include polyfills for the above APIs.
