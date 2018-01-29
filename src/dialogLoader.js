@@ -47,4 +47,6 @@ const dialogLoader = function(options = {}) {
     init();
 };
 
-export default dialogLoader;
+const instance = dialogLoader();
+
+export default instance;

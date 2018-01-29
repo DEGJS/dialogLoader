@@ -1,6 +1,6 @@
 {
     "name": "dialogLoader",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Asynchronously load and register HTML dialog elements for cross-browser support.",
     "keywords": [
         "DEGJS"
