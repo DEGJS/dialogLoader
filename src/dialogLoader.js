@@ -10,11 +10,7 @@ const dialogLoader = function(options = {}) {
     const mutationConfig = {
         childList: true,
         attributes: false,
-        characterData: false,
-        subtree: true,
-        attributeOldValue: false,
-        characterDataOldValue: false,
-        attributeFilter: false
+        characterData: false
     };
 
     const settings = {...defaults, ...options};
