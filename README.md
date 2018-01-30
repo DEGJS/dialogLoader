@@ -19,17 +19,6 @@ JSPM automatically installs and configures this module's dependencies for you. H
 * dialogLoader requires [SystemJS](https://github.com/systemjs/systemjs) and will only work with v0.19.x or earlier, as it uses its `System.import()` method to load modules.
 * [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
 
-## Options
-#### options.enableObservation
-Type: `boolean`
-Setting this option to `false` prevents dialogLoader from observing the page for added dialog elements. 
-Defaults to `true`.
-
-#### options.observedEl
-Type: `Element`
-The element to be observed for changes. 
-Defaults to `document.body`.
-
 ## CSS Notes
 Include the following CSS in a project to prevent unwated IE issues:
 ```

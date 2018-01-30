@@ -1,26 +1,19 @@
 import dialogPolyfill from 'dialog-polyfill';
 
-const dialogLoader = function(options = {}) {
+const dialogLoader = function() {
 
-    const defaults = {
-        enableObservation: true,
-        observedEl: document.body
-    };
-    
     const mutationConfig = {
         childList: true,
         attributes: false,
         characterData: false
     };
 
-    const settings = {...defaults, ...options};
+    const observedEl = document.body;
 
     function init() {
         initDialogsOnPage();
-        if(settings.enableObservation === true){
-            const observer = new MutationObserver(onMutation);
-            observer.observe(settings.observedEl, mutationConfig);
-        }
+        const observer = new MutationObserver(onMutation);
+        observer.observe(observedEl, mutationConfig);
     }
 
     function initDialogsOnPage(){
