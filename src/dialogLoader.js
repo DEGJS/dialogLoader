@@ -22,10 +22,10 @@ const dialogLoader = function() {
     }
 
     function onMutation(mutationsList){
-        for(const mutation of mutationsList) {
+        mutationsList.forEach(mutation => {
             const dialogEls = getDialogEls(mutation);
             registerDialogs(dialogEls);
-        }
+        });
     }
 
     function getDialogEls(mutation){
