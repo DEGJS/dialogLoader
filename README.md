@@ -30,7 +30,7 @@ Include the following CSS in a project to prevent unwated IE issues:
 ```
 
 ## Browser Support
-moduleLoader depends on the following browser APIs:
+dialogLoader depends on the following browser APIs:
 
 + forEach: [Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | [Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill) -- only necessary if IE9 is a supported browser on your project
 
