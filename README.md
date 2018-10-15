@@ -33,5 +33,6 @@ Include the following CSS in a project to prevent unwanted IE issues:
 dialogLoader depends on the following browser APIs:
 
 + forEach: [Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | [Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill) -- only necessary if IE9 is a supported browser on your project
++ MutationObserver: [Documentation](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) | [Polyfill](https://github.com/megawac/MutationObserver.js)
 
 To support legacy browsers, you'll need to include polyfills for the above APIs.
