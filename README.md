@@ -6,21 +6,21 @@ The dialogLoader finds and registers all dialog elements with the dialog polyfil
 ## Install
 dialogLoader is an ES6 module. Consequently, you'll nee an ES6 transpiler ([Babel](https://babeljs.io) is an option) and a module loader as part of your Javascript workflow.
 
-If you are already using the [JSPM package manager](http://jspm.io) for your project, you can install dialogLoader with the following command:
+If you are already using NPM for your project, you can install dialogLoader with the following command:
 
 ```
-$ jspm install github:DEGJS/dialogLoader
+$ npm install @degjs/dialog-loader
 ```
 
 ### Dependencies
-JSPM automatically installs and configures this module's dependencies for you. However, if you manually install this module without using JSPM, you will also need to manually install these dependencies:
+NPM will automatically installs and configures this module's dependencies for you. However, if you manually install this module without using NPM, you will also need to manually install these dependencies:
 
 * [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
 * dialogLoader requires [SystemJS](https://github.com/systemjs/systemjs) and will only work with v0.19.x or earlier, as it uses its `System.import()` method to load modules.
 * [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
 
 ## CSS Notes
-Include the following CSS in a project to prevent unwated IE issues:
+Include the following CSS in a project to prevent unwanted IE issues:
 ```
 .dialog {
   &:not([open]) {
