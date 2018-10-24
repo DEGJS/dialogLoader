@@ -12,8 +12,10 @@ const dialogLoader = function() {
 
     function init() {
         initDialogsOnPage();
-        const observer = new MutationObserver(onMutation);
-        observer.observe(observedEl, mutationConfig);
+        if (window.MutationObserver) {
+            const observer = new MutationObserver(onMutation);
+            observer.observe(observedEl, mutationConfig);
+        }
     }
 
     function initDialogsOnPage(){
