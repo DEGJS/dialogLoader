@@ -1,6 +1,6 @@
 {
     "name": "@degjs/dialog-loader",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Asynchronously load and register HTML dialog elements for cross-browser support.",
     "keywords": [
         "DEGJS",
@@ -34,8 +34,8 @@
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
         "@babel/preset-env": "^7.1.0",
         "babel-core": "^7.0.0-bridge.0",
-        "babel-jest": "^23.6.0",
-        "jest": "^23.6.0"
+        "babel-jest": "^24.8.0",
+        "jest": "^24.8.0"
     },
     "jest": {
         "testPathIgnorePatterns": [
